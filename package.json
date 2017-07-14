@@ -1,0 +1,31 @@
+{
+  "name": "ts-complexity",
+  "version": "0.0.1",
+  "description": "Executable wrapper to TS Metrics",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1337programming/ts-complexity.git"
+  },
+  "keywords": [
+    "typescript",
+    "complexity"
+  ],
+  "author": "Tom Manion; Patrick Opie",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/1337programming/ts-complexity/issues"
+  },
+  "bin": {
+    "ts-complexity": "bin/ts-complexity"
+  },
+  "homepage": "https://github.com/1337programming/ts-complexity#readme",
+  "dependencies": {
+    "glob": "^7.1.2",
+    "tsmetrics-core": "^0.4.0",
+    "yargs": "^8.0.2"
+  }
+}
