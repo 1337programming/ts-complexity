@@ -1,5 +1,4 @@
 const glob = require('glob');
-console.log(process.argv);
 const globPattern = process.argv.length > 2 ? process.argv[2] : '{,!(node_modules)/**/}*.ts';
 const ComplexityRunner = require('./complexity-runner');
 
@@ -13,7 +12,7 @@ glob(globPattern, (err, matches) => {
 
     matches.forEach(f => {
         const result = cr.getMetrics(f);
-        let errorFound = errorFound || result;
+        errorFound = errorFound || result;
     });
 
     if (errorFound) {
