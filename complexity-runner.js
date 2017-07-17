@@ -2,8 +2,9 @@ const MetricsParser = require('tsmetrics-core/MetricsParser').MetricsParser;
 const MetricsConfiguration = require('tsmetrics-core/MetricsConfiguration').MetricsConfiguration;
 const glob = require('glob');
 const path = require('path');
+const argv = require('yargs').argv;
 
-const maxComplexity = 10;
+const maxComplexity = getMaxComplexity();
 
 let errorFound = false;
 module.exports = class ComplexityRunner {
@@ -24,5 +25,14 @@ module.exports = class ComplexityRunner {
             this.log(element, file, level + 1);
         });
         return errorFound;
+    }
+}
+
+function getMaxComplexity() {
+    try {
+        return parseInt(argv['max-complexity']);
+    }
+    catch (e) {
+        return 15;
     }
 }

@@ -1,6 +1,6 @@
 {
   "name": "ts-complexity",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Executable wrapper to TS Metrics",
   "main": "index.js",
   "scripts": {
