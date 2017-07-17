@@ -1,6 +1,7 @@
 const glob = require('glob');
-const globPattern = process.argv.length > 2 ? process.argv[2] : '{,!(node_modules)/**/}*.ts';
+const argv = require('yargs').argv;
 const ComplexityRunner = require('./complexity-runner');
+const globPattern = argv.pattern || '{,!(node_modules)/**/}*.ts';
 
 glob(globPattern, (err, matches) => {
     if (err) {
